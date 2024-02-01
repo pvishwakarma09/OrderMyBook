@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="Add To Cartport" content="width=device-width, initial-scale=1">
+    <title>E-commerce Website(OrderMyBook)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- navbar  start -->
+
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ">
+          <a class="navbar-brand text-warning fw-bold fs-3" href="#"><img class="logo" src="./Now! (1).png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="about.html">About</a> <!-- add  about file -->
+               </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">School Books</a></li>
+                  <li><a class="dropdown-item" href="#">Collage Books</a></li>
+                  <li><a class="dropdown-item" href="#">Other Books</a></li>
+                 <li><hr class="dropdown-dir"></li>
+
+                  <li><a class="dropdown-item fw-bold" href="/">E-Books (pdf format)</a></li>
+                 
+                </ul>
+                <li class="nav-item">
+                  <a class="nav-link active fw-bold" aria-current="page" href="contact.html">Contact</a>
+                </li>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+           
+            <div class="mx-2">
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#loginmodal">Login</button>
+              <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#sinupmodal">SignUP</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+<!-- login Modal -->
+
+<div class="modal fade" id="loginmodal" tabindex="-1" aria-labelledby="#loginmodal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="#loginmodal">Login to OrderMyBook</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+       
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+          <label class="form-check-label" for="validationFormCheck1">Are You Student</label>
+          <div class="invalid-feedback">Example invalid feedback text</div>
+        </div>
+      
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+          <label class="form-check-label" for="validationFormCheck2">Are You Proffesor</label>
+        </div>
+        <div class="form-check mb-3">
+          <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+          <label class="form-check-label" for="validationFormCheck3">Are You Writer</label>
+          <div class="invalid-feedback">Your field of Interset</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- sinup Modal -->
+
+<div class="modal fade" id="sinupmodal" tabindex="-1" aria-labelledby="#sinupmodal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="sinupmodal">Get an OrderMyBook Account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="validationServer01" class="form-label">First name</label>
+            <input type="text" class="form-control is-valid" id="validationServer01" value="" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationServer02" class="form-label">Last name</label>
+            <input type="text" class="form-control is-valid" id="validationServer02" value="" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationServerUsername" class="form-label">Email id</label>
+            <div class="input-group has-validation">
+              <!-- <span class="input-group-text" id="inputGroupPrepend3">text@gmail.com</span> -->
+              <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+              <div id="validationServerUsernameFeedback" >
+                Please enter your email
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label  class="form-label">City</label>
+            <input type="text" class="form-control is-invalid" >
+            <div >
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationServer04" class="form-label">State</label>
+            <select>
+              <option selected  value="">Choose</option>
+              <option>Uttar Pradesh</option>
+              <option>Madya Pradesh</option>
+              <option>Andra Pradesh</option>
+              <option>Uttrakhand</option>
+              <option>Rajisthan</option>
+              <option>Gujrat</option>
+              <option>Tamilnaudu</option>
+              <option>Jharkhand</option>
+              <option>Karnataka</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+
+          </div>
+          <div class="col-12 mx-4">
+            <div class="form-check">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+              <label class="form-check-label" for="invalidCheck3">
+                Agree to terms and conditions
+              </label>
+              <div id="invalidCheck3Feedback" class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mx-3 my-3">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- carsousel start  -->
+
+      <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+
+          <button type="button"data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="325" src="young-student-looking-book-library.jpg" width="100%" height="60%" ="book1">        
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="325" src="slide.jpg" width="100%" height="60%" alt="book2">
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="325" src="library-slider.jpg" width="100%" height="60%" alt="book3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+<!-- main content start -->
+
+<div class="container my-2 py-4 bg-light ">
+  <h1>TRENDING BOOKS</h1>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card shadow-sm">
+<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33612908_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Are there specific themes or aspects of clinical medicine that the book emphasizes? For example, diagnosis, treatment, patient-centered care, or emerging trends in medicine.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$45</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33678486_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Are there specific themes or aspects of clinical medicine that the book emphasizes? For example, diagnosis, treatment, patient-centered care, or emerging trends in medicine.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$55</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33676970_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Are there specific themes or aspects of clinical medicine that the book emphasizes? For example, diagnosis, treatment, patient-centered care, or emerging trends in medicine.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$65</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- second secton-->
+
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="	https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33612941_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$35</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33612967_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$25</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33563116_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$40</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Third section-->
+
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33722882_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$42</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33720399_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$48</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33721343_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$44</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fourth section-->
+
+    <div class="col">
+      <div class="card shadow-sm">
+<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33722237_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$41</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="	https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33690444_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$38</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33563116_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$33</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIFTH section-->
+
+    <div class="col">
+      <div class="card shadow-sm">
+<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33707884_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$15</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33555149_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$18</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://getmybooks.sgp1.cdn.digitaloceanspaces.com/images/33708195_1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Is it a comprehensive textbook, a practical guide, case studies, research-based, or a combination?</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">Add To Cart</button>
+              <button type="button" class="btn btn-sm btn-outline-primary">$20</button>
+            </div>
+            <small class="text-body-primary">Recents</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- fottor start here-->
+
+ <div class=" MY-3 bg-dark text-light ">
+  <footer class="pt-5 pb-1">
+    <div class="container">
+    <div class="row text-center ">
+    <div class="col-sm-12 pl-0">
+    <div class="row">
+    <div class="col-sm-3">
+    <h4>Company</h4>
+    <ul class="list-unstyled text-center text-danger ">
+      <li class="list-inline-item"><a href="#">About Us</a></li>
+    <li><a href="#">Career</a></li>
+    <li><a href="#" target="_blank">Blog</a></li>
+    <li><a href="#">Contact Us</a></li>
+    </ul>
+    </div>
+    <div class="col-sm-3">
+    <h4>Policies</h4>
+    <ul class="list-unstyled text-center">
+    <li><a href="#">Privacy Policies</a></li>
+    <li><a href="#">Terms of Use</a></li>
+    <li><a href="#">Secure Shopping</a></li>
+    <li><a href="#">Copyright Policy</a></li>
+    </ul>
+    </div>
+    <div class="col-sm-3">
+    <h4>Help</h4>
+    <ul class="list-unstyled text-center">
+    <li><a href="#">Payment</a></li>
+    <li><a href="#">Shipping</a></li>
+    <li><a href="#">Return</a></li>
+    <li><a href="#">FAQ</a></li>
+    </ul>
+    </div>
+    <div class="col-sm-3">
+    <h4>Misc</h4>
+    <ul class="list-unstyled text-center">
+    <li><a href="#">Affiliate</a></li>
+    <li><a href="#">Sitemap</a></li>
+       
+    </ul>
+    </div>
+    </div>
+    <ul class="list-unstyled icons list-inline text-center">
+    <li class="list-inline-item"><a href="#" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/facebook.png" alt="Facebook" width="32px" height="32px"></a></li>
+    <li class="list-inline-item"><a href="# target="_blank"><img src="https://www.bookswagon.com/Images/staticimages/twitter.png" alt="Twitter" width="32px" height="32px"></a></li>
+    <li class="list-inline-item"><a href="=" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/linkedin.png" alt="Linkedin" width="32px" height="32px"></a></li>
+    <li class="list-inline-item"><a href="#" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/pinterest.png" alt="Pinterest" width="32px" height="32px"></a></li>
+    <li class="list-inline-item"><a target="_blank" href="#"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/youtube.png" alt="Youtube" width="32px" height="32px"></a></li>
+    <li class="list-inline-item"><a href="#" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/instagram.png" alt="Instagram" width="32px" height="32px"></a></li></ul>
+    </div>
+    
+    
+    </div>
+    <div class="row">
+     <div class="col-md-12  text-center text-light copyrighttext mb-3">
+    Copyright © 2024 . OrderMyBook.com. <span class="allrightreserve">All Rights Reserved</span>
+    </div>
+    </div>
+        </div>
+    </footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

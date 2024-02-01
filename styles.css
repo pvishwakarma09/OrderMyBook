@@ -1,0 +1,8 @@
+.container-fluid .logo{
+width: 50%;
+max-width: 380px;
+}
+.card.shadow-sm:hover{
+    /* opacity: 0.5; */
+    transform: scale(1.05)
+}
