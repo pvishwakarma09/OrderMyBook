@@ -1,2 +1,2 @@
 # OrderMyBook
-This is an e-commerce website order my book
+E-commerce website order my book
